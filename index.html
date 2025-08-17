@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolats Leonidas Entreprises - Cacao Square Nice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: #cf6a30;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .headline {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subheadline {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .urgency {
+            background: #06245a;
+            color: white;
+            padding: 18px 35px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 40px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(6, 36, 90, 0.3);
+        }
+
+        .urgency:hover {
+            background: white;
+            color: #06245a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(6, 36, 90, 0.4);
+        }
+
+        /* Benefits */
+        .benefits {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .benefit {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .benefit-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .cta-subtitle {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #666;
+        }
+
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: #cf6a30;
+        }
+
+        .cta-button {
+            background: #cf6a30;
+            color: white;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(207, 106, 48, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #06245a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(207, 106, 48, 0.4);
+        }
+
+        /* Social Proof */
+        .social-proof {
+            background: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .social-proof h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .client-logos {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .client-logo {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: #666;
+            border: 2px solid #eee;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .client-logo:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 600px;
+            font-style: italic;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .why-us h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #333;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #06245a;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 32px;
+            }
+
+            .subheadline {
+                font-size: 18px;
+            }
+
+            .benefits {
+                gap: 20px;
+            }
+
+            .benefit {
+                min-width: 150px;
+                padding: 15px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                /* 1 colonne sur mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <section class="header">
+        <div class="container">
+            <!-- <div class="logo">CACAO SQUARE • Distributeur officiel Leonidas</div> -->
+
+            <h1 class="headline">Offres Noël 2025<br></h1>
+
+            <p class="subheadline">CSE • Entreprises • Associations Parents d'Élèves</p>
+
+            <a href="https://drive.google.com/file/d/14OiM2fiUELLlYj1y2g4rgM7938Cda2Bb/view?usp=drive_link"
+                class="urgency" download="Catalogue-Noel-2025-Cacao-Square.pdf">
+                📥 Télécharger le catalogue Noël 2025
+            </a>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">🎄</div>
+                    <strong> Sélection Noël 2025</strong><br>
+                    Ballotins, coffrets & sujets<br>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">✅</div>
+                    <strong>Tarifs privilégiés</strong><br>
+                    Demandez nos prix 👇
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🏆</div>
+                    <strong>100 % belge</strong><br>
+                    Qualité Leonidas depuis 1913<br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">✉ Recevez nos tarifs exclusifs en 1 clic</h2>
+            <!-- <p class="cta-subtitle">Formulaire court - Réponse immédiate par email</p> -->
+
+            <div class="form-container">
+                <form name="demande-tarifs" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"
+                    id="contact-form">
+                    <!-- Champ anti-spam caché -->
+                    <p style="display: none;">
+                        <label>Don't fill this out: <input name="bot-field" /></label>
+                    </p>
+
+                    <!-- Champ caché obligatoire pour Netlify -->
+                    <input type="hidden" name="form-name" value="demande-tarifs" />
+
+                    <div class="form-group">
+                        <label for="name">Votre nom :</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prenom">Votre prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profile">Vous représentez :</label>
+                        <select id="profile" name="profile" required>
+                            <option value="">Sélectionnez votre profil</option>
+                            <option value="entreprise">Entreprise / PME</option>
+                            <option value="cse">CSE / Comité d'entreprise</option>
+                            <option value="ape">Association Parents d'Élèves</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email professionnel :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; font-weight: normal;">
+                            <input type="checkbox" name="newsletter" value="oui"
+                                style="margin-right: 10px; width: auto;">
+                            Je souhaite recevoir la newsletter (optionnel)
+                        </label>
+                    </div>
+
+                    <button type="submit" class="cta-button">
+                        📧 Recevoir les tarifs maintenant
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <h3>Ils nous font déjà confiance</h3>
+
+            <div class="client-logos">
+                <div class="client-logo">GENERALI</div>
+                <div class="client-logo">LA POSTE</div>
+                <div class="client-logo">INEO PACA</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Pourquoi nous choisir ?</h2>
+
+            <div class="features">
+                <div class="feature">
+                    <h4>🎯 Prix compétitifs</h4>
+                    <p>Qualité Leonidas à prix maîtrisé.<br>Grille tarifaire claire et adaptée.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>🚚 Logistique clé en main</h4>
+                    <p>Livraison groupée, multi-sites possible, retrait magasin à Nice.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>📞 Proximité niçoise</h4>
+                    <p>Équipe locale réactive. Support personnalisé, conseil adapté.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>🔄 Partenariat durable</h4>
+                    <p>Noël, Pâques, Halloween, fêtes des mères…<br>Tarifs bloqués 12 mois = budget maîtrisé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="contact-info">
+                <strong>CACAO SQUARE</strong><br>
+                14 avenue Malausséna, 06000 Nice<br>
+                📞 04 89 03 37 49 • ✉️ contact@cacaosquare.fr
+            </div>
+            <p>&copy; 2025 Cacao Square - Distributeur officiel Leonidas</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
