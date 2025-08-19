@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chocolats Leonidas Entreprises & associations - Cacao Square Nice</title>
+    <title>Chocolats Leonidas Entreprises - Cacao Square Nice</title>
+
+    <link rel="preload" href="img/ballotin-cadeau-Leonidas.webp" as="image">
+    <link rel="preload" href="img/noel-ambiance-2.webp" as="image">
+
     <style>
         * {
             margin: 0;
@@ -24,9 +28,13 @@
             padding: 0 20px;
         }
 
-        /* Header */
+
         .header {
-            background: #cf6a30;
+            background: linear-gradient(rgba(207, 106, 48, 0.5), rgba(6, 36, 90, 0.7)),
+                url('img/noel-ambiance-2.webp') no-repeat center center;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: white;
             padding: 60px 0;
             text-align: center;
@@ -216,17 +224,20 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
 
-        /* Why Choose Us */
         .why-us {
-            background: #f8f9fa;
+            background: linear-gradient(rgba(207, 106, 48, 0.6), rgba(6, 36, 90, 0.7)),
+                url('img/ballotin-cadeau-Leonidas.webp') no-repeat center center;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             padding: 80px 0;
         }
 
         .why-us h2 {
             text-align: center;
-            font-size: 36px;
+            font-size: 40px;
             margin-bottom: 50px;
-            color: #333;
+            color: white;
         }
 
         .features {
@@ -241,13 +252,13 @@
             background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
         }
 
         .feature:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
         }
 
         .feature h4 {
@@ -258,7 +269,7 @@
 
         /* Footer */
         .footer {
-            background: #333;
+            background: #1f1f1f;
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -266,6 +277,11 @@
 
         .contact-info {
             margin-bottom: 20px;
+        }
+
+        .header::after,
+        .why-us::after {
+            content: "background image";
         }
 
         /* Responsive */
@@ -301,7 +317,8 @@
         <div class="container">
             <!-- <div class="logo">CACAO SQUARE • Distributeur officiel Leonidas</div> -->
 
-            <h1 class="headline">Offres Noël 2025<br>Chocolats Leonidas</h1>
+            <h1 class="headline">Offres Noël 2025<br></h1>
+            <h2>Chocolats Leonidas</h2>
 
             <p class="subheadline">CSE • Entreprises • Associations Parents d'Élèves</p>
 
@@ -348,18 +365,18 @@
                     <input type="hidden" name="form-name" value="demande-tarifs" />
 
                     <div class="form-group">
-                        <label for="NOM">Votre nom :</label>
-                        <input type="text" id="NOM" name="NOM" required>
+                        <label for="name">Votre nom :</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="PRENOM">Votre prénom :</label>
-                        <input type="text" id="PRENOM" name="PRENOM" required>
+                        <label for="prenom">Votre prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="PROFIL">Vous représentez :</label>
-                        <select id="PROFIL" name="PROFIL" required>
+                        <label for="profile">Vous représentez :</label>
+                        <select id="profile" name="profile" required>
                             <option value="">Sélectionnez votre profil</option>
                             <option value="Entreprise">Entreprise / PME</option>
                             <option value="CSE">CSE / Comité d'entreprise</option>
@@ -368,8 +385,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="EMAIL">Email professionnel :</label>
-                        <input type="email" id="EMAIL" name="EMAIL" required>
+                        <label for="email">Email professionnel :</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
 
                     <button type="submit" class="cta-button">
@@ -417,7 +434,7 @@
 
                 <div class="feature">
                     <h4>🔄 Partenariat durable</h4>
-                    <p>Noël, Pâques, Halloween, fêtes des mères…<br>Tarifs bloqués 12 mois = budget maîtrisé.</p>
+                    <p>Noël, Pâques, tous vos moments forts... Commande ponctuelle et récurrente.</p>
                 </div>
             </div>
         </div>
@@ -437,12 +454,4 @@
 
 </body>
 
-
 </html>
-
-
-
-
-
-
-
